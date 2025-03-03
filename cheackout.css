@@ -1,0 +1,193 @@
+/* Resetting margin and padding */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* Body styling with background image */
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: url('watch.jpg') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #333;
+    padding: 20px;
+}
+
+
+/* Checkout container styling */
+
+.checkout-container {
+    background: rgba(255, 255, 255, 0.9);
+    /* Semi-transparent background */
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    width: 100%;
+    max-width: 600px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.checkout-container:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Header styling */
+
+h1 {
+    text-align: center;
+    color: #4CAF50;
+    font-size: 32px;
+    margin-bottom: 30px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+
+/* Form styling */
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+
+/* Form group */
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    font-weight: 500;
+    color: #555;
+    margin-bottom: 8px;
+    font-size: 16px;
+}
+
+
+/* Input, textarea, select styling */
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+    padding: 15px 20px;
+    border-radius: 12px;
+    border: 1px solid #ddd;
+    font-size: 16px;
+    background-color: #f9f9f9;
+    color: #333;
+    transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+    border-color: #4CAF50;
+    box-shadow: 0 0 8px rgba(76, 175, 80, 0.5);
+    outline: none;
+}
+
+.form-group textarea {
+    resize: vertical;
+    height: 120px;
+}
+
+
+/* Submit button styling */
+
+.btn-submit {
+    padding: 15px;
+    background-color: #4CAF50;
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.btn-submit:hover {
+    background-color: #45a049;
+    transform: translateY(-3px);
+}
+
+.btn-submit:active {
+    transform: translateY(0);
+}
+
+
+/* Order confirmation message */
+
+.order-confirmation {
+    background: rgba(236, 250, 236, 0.9);
+    /* Light green, semi-transparent */
+    border: 2px solid #4CAF50;
+    padding: 30px;
+    text-align: center;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    margin-top: 30px;
+}
+
+.order-confirmation h2 {
+    color: #388e3c;
+    font-size: 26px;
+    font-weight: 600;
+}
+
+.order-confirmation p {
+    color: #333;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+
+/* Responsive design */
+
+@media screen and (max-width: 768px) {
+    .checkout-container {
+        width: 90%;
+        padding: 25px;
+    }
+    h1 {
+        font-size: 28px;
+    }
+    .form-group input,
+    .form-group select {
+        font-size: 14px;
+    }
+    .btn-submit {
+        font-size: 16px;
+    }
+    .order-confirmation p {
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .checkout-container {
+        padding: 20px;
+    }
+    h1 {
+        font-size: 24px;
+    }
+    .btn-submit {
+        font-size: 14px;
+    }
+}
